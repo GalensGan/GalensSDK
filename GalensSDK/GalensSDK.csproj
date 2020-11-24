@@ -53,5 +53,10 @@
     <Compile Include="StyletEx\IInvoke.cs" />
     <Compile Include="StyletEx\InvokeParameter.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Stylet">
+      <Version>1.3.4</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
