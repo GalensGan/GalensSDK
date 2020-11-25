@@ -58,5 +58,8 @@
       <Version>1.3.4</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SqlliteEx\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
