@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stylet;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,26 @@ using System.Threading.Tasks;
 
 namespace GalensSDK.StyletEx
 {
-    public class KeyOneActive<T> : Stylet.Conductor<T>.Collection.OneActive where T : class, IInvoke
+    public class KeyOneActive<T> : Stylet.Conductor<T>.Collection.OneActive, IInvoke where T : class, IInvoke
     {
+        #region IInvoke 实现
+        public string ID { get; set; }
+
+        public event Action<InvokeParameter> InvokeEvent;
+
+        public virtual void BeforeInvoke(InvokeParameter parameter)
+        {
+        }
+
+        public virtual void AfterInvoke(InvokeParameter parameter)
+        {
+        }
+
+        public virtual void Reset(InvokeParameter parameter)
+        {
+        }
+        #endregion       
+
         /// <summary>
         /// 注册项
         /// </summary>
